@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Alpenrose - Gerlitzen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Hotel Alpenrose</div>
+            <ul class="nav-links">
+                <li><a href="#about">O nas</a></li>
+                <li><a href="#gallery">Galeria</a></li>
+                <li><a href="#location">Lokalizacja</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hotel Alpenrose</h1>
+            <p>Twój sportowy wypoczynek w sercu Alp</p>
+            <a href="#contact" class="btn">Zarezerwuj pobyt</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">O hotelu</h2>
+        <div class="about-grid">
+            <div class="about-card">
+                <h3>Komfortowy pobyt</h3>
+                <p>Hotel Alpenrose oferuje przytulne pokoje z widokiem na góry, wyposażone w nowoczesne udogodnienia dla
+                    Twojego komfortu.</p>
+            </div>
+            <div class="about-card">
+                <h3>Doskonała lokalizacja</h3>
+                <p>Położony w malowniczej miejscowości Gerlitzen, zapewniamy bezpośredni dostęp do tras narciarskich i
+                    szlaków turystycznych.</p>
+            </div>
+            <div class="about-card">
+                <h3>Udogodnienia</h3>
+                <p>Do dyspozycji gości: restauracja, bar, sauna, przechowalnia sprzętu narciarskiego oraz bezpłatny
+                    parking.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2 class="section-title">Galeria</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="https://media-cdn.holidaycheck.com/w_768,h_432,c_fill,q_auto,f_auto/ugc/images/6ca6cab9-1c1f-3e05-a7e8-778b4054f46a"
+                    alt="Hotel zewnątrz">
+            </div>
+            <div class="gallery-item">
+                <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/404860843.jpg?k=c42a23f675436f93cf41c333e95b06c38f616f985cdf228e57ec82654ff37a8d&o=&hp=1"
+                    alt="Pokój">
+            </div>
+            <div class="gallery-item">
+                <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/89075677.jpg?k=80b2eca1444a3ab0038942c6449e1a838c5a6acf9d0d551caefbafc37a91d16a&o=&hp=1"
+                    alt="Restauracja">
+            </div>
+            <div class="gallery-item">
+                <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/89075671.jpg?k=2ce3a1379f87009a95a3738ff0335761824d742ac875fe265005f4dfcdd08ce2&o=&hp=1"
+                    alt="Widok z hotelu">
+            </div>
+        </div>
+    </section>
+
+    <section id="location">
+        <h2 class="section-title">Lokalizacja</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Adres</h3>
+                <p>Kanzelhöhe 20<br>
+                    9521 Treffen am Ossiacher See<br>
+                    Austria</p>
+                <h3>Jak dojechać</h3>
+                <p>Hotel znajduje się 15 minut jazdy od jeziora Ossiacher See, w pobliżu wyciągu narciarskiego
+                    Gerlitzen.</p>
+            </div>
+            <div id="map">
+                <!-- Tutaj można dodać mapę Google -->
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Kontakt</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Informacje kontaktowe</h3>
+                <p>Telefon: +48 606 798 698</p>
+                <p>Email: urbananna28@gmail.com</p>
+                <p>Recepcja czynna 24/7</p>
+            </div>
+            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+                <!-- Replace with your Access Key -->
+                <input type="hidden" name="access_key" value="55cda36a-e992-4f19-855a-cd62a3648678">
+
+                <!-- Form Inputs. Each input must have a name="" attribute -->
+                <input type="text" name="name" placeholder="Imię i nazwisko" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Wiadomość" rows="5" required></textarea>
+
+                <!-- Honeypot Spam Protection -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                <!-- Custom Confirmation / Success Page -->
+                <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+
+                <button type="submit" class="btn">Wyślij wiadomość</button>
+
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Hotel Alpenrose. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+<style>
+    /* Reset i podstawowe style */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+        color: #333;
+    }
+
+    /* Header i nawigacja */
+    header {
+        background-color: rgba(255, 255, 255, 0.95);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #2c3e50;
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: #2c3e50;
+        transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+        color: #3498db;
+    }
+
+    /* Hero section */
+    .hero {
+        height: 100vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+            url('https://cf.bstatic.com/xdata/images/hotel/max1024x768/404860849.jpg?k=9be11621b671fcc99b2ddfbf058389c798e35df5c1fef0088052e18bad899b40&o=&hp=1') center/cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Sekcje */
+    section {
+        padding: 5rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    /* O hotelu */
+    .about-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    .about-card {
+        background: #f8f9fa;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Galeria */
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+    }
+
+    .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        aspect-ratio: 16/9;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s;
+    }
+
+    .gallery-item:hover img {
+        transform: scale(1.1);
+    }
+
+    /* Kontakt */
+    .contact-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    .contact-info {
+        background: #f8f9fa;
+        padding: 2rem;
+        border-radius: 8px;
+    }
+
+    .contact-form {
+        display: grid;
+        gap: 1rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 0.5rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+    .btn {
+        background: #2c3e50;
+        color: white;
+        padding: 0.8rem 1.5rem;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .btn:hover {
+        background: #34495e;
+    }
+
+    /* Footer */
+    footer {
+        background: #2c3e50;
+        color: white;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    /* Responsywność */
+    @media (max-width: 768px) {
+        .nav-links {
+            display: none;
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+        }
+    }
+</style>
+
+<script>
+    // Płynne przewijanie do sekcji
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Animacja pojawiania się elementów podczas przewijania
+    const observerOptions = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('section').forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(20px)';
+        section.style.transition = 'all 0.5s ease-out';
+        observer.observe(section);
+    });
+
+    // Sticky header
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        header.classList.toggle('sticky', window.scrollY > 0);
+    });
+</script>
